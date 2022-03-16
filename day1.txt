@@ -1,13 +1,23 @@
+/*
+	The Program will only print out
+	"You passed!" on the terminal because
+	the score variable is initialized as 80.
+*/
+
 int score = 80;
 
 String result;
 
 if (score == 80) {
+	//print "You passed!" on the terminal, if the score is 80.
 	result = "You passed!";
 } else if (score > 80) {
+	//If the score is above 80, it will print out "You did great!". 
 	result = "You did great!";
 } else {
+	//Everything else, it will print "You did not pass. Try again!"
 	result = "You did not pass. Try again!";
 }
 
+	//Print result on the terminal.
 System.out.println(result);

@@ -1,12 +1,27 @@
+/*
+	Abstract data structure Food with two strings
+	as the data. 
+	Food class includes a method that modifies
+		the name variable with "Cooked " in the front
+
+	The program prints out "Cooked Potato"		
+
+*/
+
+//Class food
 public class Food {
 	public String name;
 	public String type;
 
+	//Constructor that initialized the data
+	//according to the arguments
 	public Food(String name, String type) {
 		this.name = name;
 		this.type = type;
 	}
 
+	//modified the data to include cooked in the
+	//front of the variable
 	public void cook() {
 		if (!name.contains("cooked")) {
 			name = "cooked " + name;
@@ -16,9 +31,13 @@ public class Food {
 
 public class Main {
 	public static void main(String[] args) {
+		//initialized a Food variable with 
+		//Potato and vegetable as the data.
 		Food myFood = new Food("potato", "vegetable");
+		//Call cook method
 		myFood.cook();
 
+		//Prints out the the name data from food class
 		System.out.println(myFood.name);
 	}
 }

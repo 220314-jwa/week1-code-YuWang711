@@ -1,7 +1,16 @@
+/*
+	The program prints three food on the terminal 
+	
+*/
 public static void main(String[] args) {
+	//Declare a string array, foodTypes that obtain
 	String[] foodTypes = getFoodTypes();
+	//Declare myType as the third index of foodTypes 
 	String myType = foodTypes[2];
 
+	//Declare another string array, then get 
+	//string array associate with the string "dinner" from
+	//the method getFoodsByType
 	String[] foodsOfMyType = getFoodsByType(myType);
 	
 	for (String food : foodsOfMyType) {
@@ -9,14 +18,23 @@ public static void main(String[] args) {
 	}
 }
 
+//A method that return a list of food food types
+//The list includes breakfast, lunch, dinner, dessert, snack
 public static String[] getFoodTypes() {
 	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"};
 	return foodTypes;
 }
 
+//Overload method that takes in a String as argument, then
+//return different types of string depending on the arguments
+//Input: String
+//Output: 
 public static String[] getFoodsByType(String type) {
+	//initialized a string array of size 3
 	String[] foods = new String[3];
 
+	//Set the string array depending
+	//on the argument
 	switch(type) {
 	case "breakfast":
 		foods[0] = "pancakes";
